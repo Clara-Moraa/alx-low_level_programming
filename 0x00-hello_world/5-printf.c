@@ -1,6 +1,6 @@
 /*
  * printf code
- * by: Collins Wamucii
+ * by: Clara Moraa
  */
 
 #include <stdio.h>
