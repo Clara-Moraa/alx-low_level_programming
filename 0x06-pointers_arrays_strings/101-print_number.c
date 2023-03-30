@@ -1,24 +1,33 @@
 #include "main.h"
 
 /**
- * print_number - prits an integer.
- * @n: the integer to be printed
+ * print_number - print number in ascii characters
+ * @n: the number to print
+ * Return: void
  */
-
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int a, tens = 1;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -num;
+		_putchar(45);
+		a = -n;
 	}
-
-	if ((num / 10) > 0)
+	else
 	{
-		print_number(num / 10);
+		a = n;
 	}
 
-	_putchar((num % 10) + '0');
+	/* find the nearest floored 10s to a*/
+	while (a / tens >= 10)
+		tens *= 10;
+
+	while (a > 0 || tens > 0)
+	{
+		_putchar(a / tens + 48);
+		a %= tens;
+		tens /= 10;
+	}
 }
+
