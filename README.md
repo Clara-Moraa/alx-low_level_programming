@@ -1,6 +1,6 @@
 I have started C programming on solving various C problems
 
-0x00. C - Hello, World
+1.0x00. C - Hello, World
 
 Why C programming is awesome
 
@@ -29,4 +29,38 @@ How to find the right header to include in your source code when using a standar
 How does the main function influence the return value of the program
 
 
-0x01. C - Variables, if, else, while
+2.0x01. C - Variables, if, else, while
+
+What are the arithmetic operators and how to use them
+
+What are the logical operators (sometimes called boolean operators) and how to use them
+
+What the the relational operators and how to use them
+
+What values are considered TRUE and FALSE in C
+
+What are the boolean operators and how to use them
+
+How to use the if, if ... else statements
+
+How to use comments
+
+How to declare variables of types char, int, unsigned int
+
+How to assign values to variables
+
+How to print the values of variables of type char, int, unsigned int with printf
+
+How to use the while loop
+
+How to use variables with the while loop
+
+How to print variables using printf
+
+What is the ASCII character set
+
+What are the purpose of the gcc flags -m32 and -m64
+
+3.0x02. C - Functions, nested loops
+
+0x04. C - More functions, more nested loops
