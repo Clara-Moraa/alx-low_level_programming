@@ -3,8 +3,8 @@
 #include <stdarg.h>
 
 /**
- * print_i - prints an integer
- * @i: integer to print
+ * print_i - prints an int
+ * @i: int to print
  *
  * Return: void
  */
@@ -14,8 +14,8 @@ void print_i(va_list i)
 }
 
 /**
- * print_c - prints a character
- * @c: character to print
+ * print_c - print a char
+ * @c: char to print
  *
  * Return: void
  */
@@ -55,12 +55,13 @@ void print_s(va_list s)
  * @format: list of argument types passed to the function
  *
  * Return: void
- *         Ignore any non char, integer, string (char *), or float type.
- *         Print nil, if string argument is NULL.
+ *         Ignore any non char,int,string(char *) and float type.
+ *         Print nil , if string argument is NULL
  */
+
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
+	unsigned int j, i;
 	va_list vl;
 	char *separator = "";
 
@@ -74,9 +75,12 @@ void print_all(const char * const format, ...)
 
 	va_start(vl, format);
 
-	for (i = 0; format && format[i]; i++)
+	i = 0;
+
+	while (format && format[i])
 	{
-		for (j = 0; struc[j].type != NULL; j++)
+		j = 0;
+		while (struc[j].type != NULL)
 		{
 			if (*(struc[j].type) == format[i])
 			{
@@ -85,11 +89,12 @@ void print_all(const char * const format, ...)
 				separator = ", ";
 				break;
 			}
+			j++;
 		}
+		i++;
 	}
 
 	va_end(vl);
 
 	printf("\n");
 }
-
